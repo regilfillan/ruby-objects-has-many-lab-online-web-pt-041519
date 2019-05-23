@@ -3,14 +3,16 @@ class Author
   
   def initialize(name)
     @name=name 
+    @posts= []
   end
   
   def posts 
-    @posts= Post.all 
+    @posts
   end 
   
   def add_post(post)
-    post.author =self 
+    post.author =self
+    
   end 
   
   def add_post_by_title(title)
